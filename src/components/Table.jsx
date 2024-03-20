@@ -195,7 +195,7 @@ const Table = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 m-3 xl:hidden">
         {data.map((item) => {
           return (
-            <div className="p-4 rounded-lg gap-2 flex flex-col shadow-lg ">
+            <div key={item.id} className="p-4 rounded-lg gap-2 flex flex-col shadow-lg ">
               <div className="flex flex-col gap-3 text-sm">
                 <div className="text-sm flex items-center gap-3 text-gray-700">
                   <Image src={item.icon} alt="icon" width={40} height={40} />
@@ -211,16 +211,16 @@ const Table = () => {
               <div>
                 <div className="flex gap-3 flex-col">
                   <div className="flex gap-2">
-                    {item.categories.map((category) => (
-                      <h1 className="bg-yellow-100 p-1 text-xs w-fit text-yellow-500 border-yellow-400 border-2 font-semibold rounded-md">
+                    {item.categories.map((category,index) => (
+                      <h1 key={index} className="bg-yellow-100 p-1 text-xs w-fit text-yellow-500 border-yellow-400 border-2 font-semibold rounded-md">
                         {category}
                       </h1>
                     ))}
                   </div>
                   <div className="flex justify-between">
                     <div className="text-sm text-gray-700 gap-3 flex">
-                      {item.tags.map((tag) => (
-                        <h1 className="bg-[#ecedef] p-1 w-fit font-semibold rounded-md">
+                      {item.tags.map((tag,index) => (
+                        <h1 key={index} className="bg-[#ecedef] p-1 w-fit font-semibold rounded-md">
                           {tag}
                         </h1>
                       ))}
