@@ -105,7 +105,7 @@ const Table = () => {
             return (
               <tr
                 className="border-2 border-[#e3e5ec] items-center"
-                key={data.id}
+                key={items.id}
               >
                 <td className="p-2  text-xs gap-2 2xl:w-56 xl:w-36 items-center text-gray-700 flex whitespace-nowrap">
                   <Image src={items.icon} alt="icon" width={20} height={20} />
