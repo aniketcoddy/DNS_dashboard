@@ -164,8 +164,8 @@ const Table = () => {
 
                 <td className="p-2 border-2 border-[#e3e5ec] text-xs  text-gray-700 whitespace-nowrap">
                   <div className="flex gap-2">
-                    {items.categories.map((category) => (
-                      <h1 className="bg-yellow-100 p-1 text-yellow-500 border-yellow-400 border-2 font-semibold rounded-md">
+                    {items.categories.map((category,index) => (
+                      <h1 key={index} className="bg-yellow-100 p-1 text-yellow-500 border-yellow-400 border-2 font-semibold rounded-md">
                         {category}
                       </h1>
                     ))}
@@ -173,8 +173,8 @@ const Table = () => {
                 </td>
                 <td className="p-2 text-xs border-2 border-[#e3e5ec] text-black whitespace-nowrap">
                   <div className="flex gap-2">
-                    {items.tags.map((tag) => (
-                      <h1 className="bg-[#ecedef] p-1 font-semibold rounded-md">
+                    {items.tags.map((tag,index) => (
+                      <h1 key={index} className="bg-[#ecedef] p-1 font-semibold rounded-md">
                         {tag}
                       </h1>
                     ))}
