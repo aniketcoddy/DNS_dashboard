@@ -86,9 +86,9 @@ const Sidebar = () => {
   };
 
   return (
-    <div>
+    <div className="bg-[#fff] col-start-1 mx-3 col-end-3 row-start-1 row-end-2  lg:hidden">
       {/* container for navbar */}
-      <div className="flex h-screen top-0 p-2 justify-between">
+      <div className="flex h-full top-0 p-2 justify-between">
         {/* the logo */}
         <div className="flex gap-1 my-3">
           <div>
@@ -108,7 +108,7 @@ const Sidebar = () => {
         </div>
 
         {/* the hamburger */}
-        <div className="lg:hidden">
+        <div>
 
           {/* responsive menu */}
           <button

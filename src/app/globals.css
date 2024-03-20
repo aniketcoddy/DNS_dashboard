@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 
+body {
+  height: 100vh;
+  display:grid;
+  grid-template-columns: 275px 1fr;
+  grid-template-rows: 50px 1fr;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
