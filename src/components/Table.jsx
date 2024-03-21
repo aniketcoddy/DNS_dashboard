@@ -80,22 +80,22 @@ const Table = () => {
       <table className="w-full hidden xl:block">
         <thead className=" border-2 border-[#e3e5ec]">
           <tr>
-            <th className=" border-2 border-[#e3e5ec] w-40 p-2 text-sm font-semibold  tracking-wide text-left">
+            <th className=" border-2 border-[#e3e5ec] w-40 3xl:w-70 p-2 text-sm font-semibold  tracking-wide text-left">
               Brand
             </th>
-            <th className=" border-2 border-[#e3e5ec] p-2 w-70 text-sm font-semibold tracking-wide  text-left">
+            <th className=" border-2 border-[#e3e5ec] p-2 3xl:w-70 w-70 text-sm font-semibold tracking-wide  text-left">
               Description
             </th>
-            <th className=" border-2 border-[#e3e5ec] p-2 w-60 text-sm font-semibold tracking-wide text-left">
+            <th className=" border-2 border-[#e3e5ec] p-2 3xl:w-70 w-60 text-sm font-semibold tracking-wide text-left">
               Member
             </th>
-            <th className=" border-2 border-[#e3e5ec] w-44 p-2 text-sm font-semibold tracking-wide text-left">
+            <th className=" border-2 border-[#e3e5ec] w-44 3xl:w-70 p-2 text-sm font-semibold tracking-wide text-left">
               Categories
             </th>
-            <th className=" border-2 border-[#e3e5ec] p-2 w-56 text-sm font-semibold tracking-wide text-left">
+            <th className=" border-2 border-[#e3e5ec] p-2 3xl:w-70 w-56 text-sm font-semibold tracking-wide text-left">
               Tags
             </th>
-            <th className=" border-2 border-[#e3e5ec] p-2 w-40 text-sm font-semibold tracking-wide text-left">
+            <th className=" border-2 border-[#e3e5ec] p-2 3xl:w-70 w-40 text-sm font-semibold tracking-wide text-left">
               Next Meeting
             </th>
           </tr>
@@ -107,23 +107,23 @@ const Table = () => {
                 className="border-2 border-[#e3e5ec] items-center"
                 key={items.id}
               >
-                <td className="p-2  text-xs gap-2 2xl:w-56 xl:w-36 items-center text-gray-700 flex whitespace-nowrap">
+                <td className="p-2  text-xs gap-2 2xl:w-56 xl:w-36 3xl:w-80 items-center text-gray-700 flex whitespace-nowrap">
                   <Image src={items.icon} alt="icon" width={20} height={20} />
-                  <h1 className="font-semibold">{items.Brand}</h1>
+                  <h1 className="font-semibold 3xl:text-lg">{items.Brand}</h1>
                 </td>
-                <td className="p-2 border-2 border-[#e3e5ec] 2xl:w-56 xl:w-80 text-xs text-gray-700 ">
-                  <h1 className="font-semibold">
+                <td className="p-2 border-2 border-[#e3e5ec] 2xl:w-56 xl:w-80 3xl:w-96 text-xs text-gray-700 ">
+                  <h1 className="font-semibold 3xl:text-xl">
                     {items.description.substring(0, 33) + "..."}
                   </h1>
                 </td>
 
-                <td className="p-2 text-sm ml-2 text-gray-700 flex items-center whitespace-nowrap relative">
+                <td className="p-2 text-sm ml-2 text-gray-700 flex items-center 3xl:w-72 whitespace-nowrap relative">
                   <Image
                     src={items.user}
                     alt="icon"
                     width={30}
                     height={30}
-                    className="absolute -top-1 left-0 rounded-full"
+                    className="absolute -top-1 left-0 rounded-full "
                   />
                   <Image
                     src={items.user}
@@ -162,26 +162,26 @@ const Table = () => {
                   />
                 </td>
 
-                <td className="p-2 border-2 border-[#e3e5ec] text-xs  text-gray-700 whitespace-nowrap">
+                <td className="p-2 border-2 border-[#e3e5ec] text-xs 3xl:w-64 text-gray-700 whitespace-nowrap">
                   <div className="flex gap-2">
                     {items.categories.map((category,index) => (
-                      <h1 key={index} className="bg-yellow-100 p-1 text-yellow-500 border-yellow-400 border-2 font-semibold rounded-md">
+                      <h1 key={index} className="bg-yellow-100 p-1 text-yellow-500 border-yellow-400 border-2 3xl:text-base font-semibold rounded-md">
                         {category}
                       </h1>
                     ))}
                   </div>
                 </td>
-                <td className="p-2 text-xs border-2 border-[#e3e5ec] text-black whitespace-nowrap">
+                <td className="p-2 text-xs border-2 border-[#e3e5ec] 3xl:w-64 text-black whitespace-nowrap">
                   <div className="flex gap-2">
                     {items.tags.map((tag,index) => (
-                      <h1 key={index} className="bg-[#ecedef] p-1 font-semibold rounded-md">
+                      <h1 key={index} className="bg-[#ecedef] p-1 font-semibold 3xl:text-base rounded-md">
                         {tag}
                       </h1>
                     ))}
                   </div>
                 </td>
                 <td className="p-2 text-xs text-gray-700 whitespace-nowrap">
-                  <h1 className="bg-green-200 px-2 p-1 text-green-700 w-fit font-bold rounded-md">
+                  <h1 className="bg-green-200 px-2 p-1 text-green-700 w-fit 3xl:text-base font-bold rounded-md">
                     {items.Meeting}
                   </h1>
                 </td>

@@ -8,7 +8,7 @@ const Header = () => {
   
 
   return (
-    <header className="bg-[#fff] col-start-2 col-end-3 mt-2  row-start-1 row-end-2 hidden lg:block">
+    <header className="bg-[#fff] col-start-2 col-end-3 mt-2 row-start-1 row-end-2 hidden lg:block">
       {/* product section */}
       <div className="flex justify-between px-2 ">
         <h1 className="text-2xl font-semibold">Products</h1>
