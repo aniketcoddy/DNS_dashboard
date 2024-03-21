@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CiPen } from "react-icons/ci";
 import { TbBrandReactNative } from "react-icons/tb";
 import { PiSpeakerHigh } from "react-icons/pi";
@@ -8,7 +8,9 @@ import { VscCode } from "react-icons/vsc";
 import { LuFolder } from "react-icons/lu";
 import { FaCaretDown } from "react-icons/fa";
 import { HiOutlineUserAdd } from "react-icons/hi";
+import "aos/dist/aos.css";
 import { IoMdHelpCircleOutline } from "react-icons/io";
+import Aos from "aos";
 
 const Side = () => {
   const [isOpenArray, setIsOpenArray] = useState(
@@ -24,11 +26,18 @@ const Side = () => {
     setIsOpenArray(updatedIsOpenArray);
   };
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <slider className="border-2 border-[#e3e5ec] overflow-auto  rounded-md m-1 p-1 col-start-1 col-end-2 row-start-1 row-end-3 hidden lg:flex">
       <div>
         {/* logo conatiner */}
-        <div className="flex gap-20 m-1 ring-[0.4px] rounded-md p-1 ring-[#cdcfcf]">
+        <div
+        data-aos="fade-down"
+        data-aos-duration="500"
+         className="flex gap-20 m-1 ring-[0.4px] rounded-md p-1 ring-[#cdcfcf]">
           {/* logo section */}
           <div className="flex gap-1 ">
             <div>
@@ -59,7 +68,10 @@ const Side = () => {
         </div>
 
         {/* team section */}
-        <div className="flex flex-col w-full">
+        <div 
+        data-aos="fade-right"
+        data-aos-duration="500"
+        className="flex flex-col w-full">
           <div className=" flex flex-col gap-4 mt-2 p-2 ring-[0.4px] rounded-md ring-[#cdcfcf]">
             {teams.map((items) => {
               return (
@@ -89,7 +101,10 @@ const Side = () => {
         </div>
 
         {/* folder section   */}
-        <div className=" flex flex-col p-2 mx-2 ">
+        <div
+        data-aos="fade-right"
+        data-aos-duration="500"
+        className=" flex flex-col p-2 mx-2 ">
           <div className="flex items-center gap-2 justify-between py-4 ">
             <h1 className="text-sm text-[#4f5151] 2xl:text-base">Folder</h1>
             <button className="text-xl text-[#4f5151] rounded-md 2xl:text-2xl ">{`+`}</button>
@@ -153,9 +168,13 @@ const Side = () => {
         </div>
 
         {/* footer section  */}
-        <div className=" flex flex-col mt-8 gap-4 px-2">
+        <div 
+        data-aos="fade-right"
+        data-aos-duration="500"
+        className=" flex flex-col mt-8 gap-4 px-2">
           {/* invite teammates container */}
-          <div className="flex justify-between cursor-pointer">
+          <div
+          className="flex justify-between cursor-pointer">
             <div className="flex items-center gap-2">
               <span>
                 <HiOutlineUserAdd />
@@ -165,7 +184,8 @@ const Side = () => {
           </div>
 
           {/* help container */}
-          <div className="flex justify-between cursor-pointer">
+          <div 
+          className="flex justify-between cursor-pointer">
             <div className="flex items-center gap-2">
               <span>
                 <IoMdHelpCircleOutline />
@@ -178,7 +198,8 @@ const Side = () => {
           </div>
 
           {/* days container */}
-          <div className="flex justify-between bg-[#b6b8b8] p-2 text-black cursor-pointer rounded-md">
+          <div
+          className="flex justify-between bg-[#b6b8b8] p-2 text-black cursor-pointer rounded-md">
             <div className="flex items-center text-xs gap-2 2xl:text-sm">
               <span className="bg-white p-1 rounded-md text-black">{`7`}</span>
               <h1 className="text-xs 2xl:text-sm">day left on trail</h1>

@@ -1,19 +1,32 @@
+'use client'
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { data } from "../../data";
 import { FaCaretDown } from "react-icons/fa";
 import { LiaSitemapSolid } from "react-icons/lia";
 import { BiSortAZ } from "react-icons/bi";
 import { FaFilter } from "react-icons/fa6";
 import { IoMdAddCircleOutline } from "react-icons/io";
+import "aos/dist/aos.css";
+import Aos from "aos";
 
 const Table = () => {
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <main className="bg-white p-1 lg:col-start-2 lg:col-end-3 lg:row-start-2 lg:row-end-3 col-start-1 col-end-3 row-start-2 row-end-3 ">
       
       {/* brand adding option */}
-      <div className="md:flex justify-between lg:border-2 hidden  xl:border-b-0 border-[#e3e5ec] py-2 items-center px-2">
-        <div className="flex items-center gap-3">
+      <div
+      
+      className="md:flex justify-between lg:border-2 hidden  xl:border-b-0 border-[#e3e5ec] py-2 items-center px-2">
+        <div 
+        data-aos="fade-right"
+        data-aos-duration="500"
+        className="flex items-center gap-3">
           {folders.map((items) => {
             return (
               <div
@@ -59,7 +72,10 @@ const Table = () => {
         </div>
 
         <div>
-          <div className="flex gap-2">
+          <div 
+           data-aos="fade-left"
+           data-aos-duration="500"
+          className="flex gap-2">
             <div className="ring-2 p-1 items-center gap-2 rounded-md ring-[#e3e5ec] flex">
               <span>
                 <IoMdAddCircleOutline />
@@ -78,7 +94,10 @@ const Table = () => {
 
       {/* table for bigger screens */}
       <table className="w-full hidden xl:block">
-        <thead className=" border-2 border-[#e3e5ec]">
+        <thead
+        data-aos="zoom-in"
+        data-aos-duration="500"
+        className=" border-2 border-[#e3e5ec]">
           <tr>
             <th className=" border-2 border-[#e3e5ec] w-40 3xl:w-70 p-2 text-sm font-semibold  tracking-wide text-left">
               Brand
@@ -104,6 +123,8 @@ const Table = () => {
           {data.map((items) => {
             return (
               <tr
+              data-aos="zoom-in"
+              data-aos-duration="600"
                 className="border-2 border-[#e3e5ec] items-center"
                 key={items.id}
               >
